@@ -1,0 +1,56 @@
+start-power-amount: 5 #What amount of power the player starts with
+power-per-kill: 1 #How much power the player gets when they kill someone
+power-per-death: 1 #How much power the player losses when they die
+maximum-give-or-take-power: 100 #What is the maximum a player can give using /powers give or /powers take
+
+#If the plugin should save it every time a player gets a power or when they click
+#true is save everytime, false is save on quit game (this might cause some data loss when server restarts)
+save-everytime-new-power: true
+
+actionbar:
+  #The actionbar message the player gets with there power
+  message: "Powers: {power}"
+
+  #How often the actionbar refreshes in ticks (20 ticks = 1 sec)
+  refresh-rate: 30
+
+ban:
+  #Ban message when they get 0 power
+  message: "You ran out of power and got banned because of it"
+
+  #How long the player will get banned for in hours
+  duration: 10
+
+powerEffect:
+  10: #The power the player needs to get this effect can only be a number
+    effect: STRENGTH #The potion effect
+    duration: -1 #The duration of the potion, do -1 for it to last permanent
+    amplifier: 1 #The amplifier of the potion, like how strong the potion is
+    ambient: false #If the potion effect should produce more translucent particles
+    particle: true #If the player should have particles
+    icon: true #If there should be a icon in the players inventory of the potion
+
+
+#Here you can change the message to be what you want
+messages:
+  #If you want to disable any message just sent it to ' '
+
+  only-player-command: "This command can only be used by players in game" #When the console is trying to use the /powers command
+  dont-have-perms: "§cYou don't have permission to use this command!" #When the player don't have the needed perm to use the command
+  usage-power-command: "§7/powers <reload,take,info,give,revive,eliminate> <player> <amount>" #When the player uses /powers command wrong
+  usage-revive-power-command: "§7/powers revive <player> " #When the player uses /powers revive command wrong
+  usage-eliminate-power-command: "§7/powers eliminate <player> " #When the player uses /powers eliminate command wrong
+  usage-info-power-command: "§7/powers info <player> " #When the player uses /powers info command wrong
+  usage-give-power-command: "§7/powers give <player> <amount>" #When the player uses /powers give command wrong
+  usage-take-power-command: "§7/powers take <player> <amount>" #When the player uses /powers take command wrong
+  reloaded-successfully: "§aSuccessfully reloaded the plugin" #When the plugin gets successfully reloaded by using /powers reload
+  no-player-online: "§cCould not find a player online with the name {name}" #When the player gives a wrong name using /powers give or /powers take
+  player-not-eliminated: "§c{name} is not eliminated yet" #When /powers revive is used on a player that still has more then 0 power
+  player-already-eliminated: "§c{name} is already eliminated" #When /powers eliminated is used on a player that is already eliminated
+  revive-successfully: "§aSuccessfully revived {name}" #When a player has been successfully got revived
+  eliminated-successfully: "§aSuccessfully eliminated {name}" #When a player has been successfully got revived
+  invalid-number-format: "§cInvalid page number format, use a number between 1 and {maximum-number}" #When a player uses either a to big to number or not using numbers
+  give-power-successfully: "§aSuccessfully gave {give} powers to {name} new power: {power}" #When a player has been successfully used /power give
+  take-power-successfully: "§aSuccessfully tok {take} powers from {name} new power: {power}" #When a player has been successfully used /power take
+  powers-info: "§7{name} has powers: {power} and eliminated: {eliminated}" #When a player uses /powers info
+  get-power-effect: "§7You have been given {effect} for reaching power {power}" #When a player gets a power effect for reaching a specific power

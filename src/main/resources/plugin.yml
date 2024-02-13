@@ -1,0 +1,9 @@
+name: DeathPower
+version: 1.0
+main: me.messdaniel.DeathPower
+api-version: '1.19.4'
+commands:
+  powers:
+    permission: powers.command
+    usage: /powers
+    description: the main command for the DeathPower plugin
